@@ -26,7 +26,6 @@ VALUES
 
 - Use Python to connect to the SQL database and perform analysis. Here’s an example using pandas and sqlalchemy:
 
-pythonCopy
 
 ```python
 import pandas as pd

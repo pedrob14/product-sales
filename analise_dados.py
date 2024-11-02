@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine 
 
 # Conectando ao banco de dados
-engine = create_engine('mysql+pymysql://username:password@localhost/Vendas')
+engine = create_engine('mysql+pymysql://root:@localhost/Vendas')
 
 # Carregando os dados da tabela de vendas
 df = pd.read_sql('SELECT * FROM Vendas', engine)
@@ -15,3 +15,4 @@ resumo = df.groupby('Produto').agg({'Quantidade': 'sum', 'Total': 'sum'}).reset_
 resumo.to_csv('resumo_vendas.csv', index=False)
 
 print(resumo)
+print("Arquivo CSV criado com sucesso!")

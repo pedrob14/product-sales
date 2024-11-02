@@ -1,5 +1,5 @@
-import pandas as pd
-from sqlalchemy import create_engine
+import pandas as pd 
+from sqlalchemy import create_engine 
 
 # Conectando ao banco de dados
 engine = create_engine('mysql+pymysql://username:password@localhost/Vendas')
